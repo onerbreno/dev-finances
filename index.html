@@ -77,7 +77,7 @@
         <div class="modal">
             <div class="form">
                 <h2>Nova Transação</h2>
-                <form action="">
+                <form action="" onsubmit="Form.submit(event)">
                     <div class="input-group">
                         <label class="sr-only" for="descriptionTransaction">Descrição</label>
                         <input 
@@ -91,7 +91,7 @@
                         <label class="sr-only" for="amountTransaction">Valor da transação</label>
                         <input 
                             type="number" 
-                            step="1.00"
+                            step="0.01"
                             name="amountTransaction" 
                             id="amountTransaction"
                             placeholder="0,00"

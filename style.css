@@ -95,6 +95,10 @@ button:hover {
     
 }
 
+.button.remove {
+    cursor: pointer;
+}
+
 
 
 
