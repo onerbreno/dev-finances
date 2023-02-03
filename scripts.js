@@ -29,7 +29,7 @@ const Transaction = {
     },
 
     remove(index) {
-        Transaction.all.splice(index + 1, 1)
+        Transaction.all.splice(index, 1)
 
         App.reload()
     },
@@ -64,7 +64,7 @@ const DOM = {
 
     addTransaction(transaction, index) {
         const tr = document.createElement('tr')
-        tr.innerHTML = DOM.innerHTMLTransaction(transaction)
+        tr.innerHTML = DOM.innerHTMLTransaction(transaction, index)
         tr.dataset.index = index
 
         DOM.transactionsContainer.appendChild(tr)
