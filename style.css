@@ -1,0 +1,289 @@
+/* global */
+:root {
+    --dark-blue: #363f5f;
+    --dark-green: #2D4A22;
+    --green: #49AA26;
+    --light-green: #12a453;
+    --light-green-hover: #3dd705;
+    --red: #e92929;
+    --gray: #969CB2;
+    --background: #F0F2F5;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 93.75%;
+}
+
+body {
+    background: var(--background);
+    font-family: 'Poppins', sans-serif;
+    height: 100vh;
+}
+
+.container {
+    width: min(90vw, 1120px);
+    margin: auto;
+}
+
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border-width: 0;
+}
+
+a {
+    text-decoration: none;
+}
+.button.new {
+    color: var(--green);
+    text-decoration: none;
+    display: inline-block;
+    margin-bottom: .8rem;
+}
+.button.new:hover {
+    color: var(--light-green-hover);
+}
+
+button {
+    width: 100%;
+    height: 50px;
+    
+    border: none;
+    
+    color: white;
+    background-color: var(--green);
+    
+    padding: 0;
+    
+    border-radius: 0.25rem;
+    
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: var(--light-green-hover);
+
+}
+
+.button.cancel {
+    color: var(--red);
+    border: 2px var(--red) solid;
+    border-radius: .25rem;
+    
+    height: 50px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    opacity: 0.7;
+}
+.button.cancel:hover {
+    opacity: 1.0;
+    
+}
+
+
+
+
+/* header */
+header {
+    background-color: var(--dark-green);
+    padding: 2rem 0 10rem;
+    text-align: center;
+}
+
+#logo {
+    color: white;
+    font-weight: normal;
+}
+
+/* balance */
+#balance {
+    margin-top: -6.5rem;
+}
+
+.balance-card {
+    width: 100%;
+
+    padding: 1.5rem 2rem;
+    background-color: white;
+    border-radius: 0.25rem;
+    margin-bottom: 2rem;
+    color: var(--dark-blue);
+}
+
+.balance-card.total {
+    background-color: var(--green);
+    color: white;
+}
+
+.balance-title {
+    font-weight: 400;
+    font-size: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.balance-value {
+    line-height: 3rem;
+    font-weight: 400;
+    font-size: 2rem;
+
+    margin-top: 1rem;
+}
+
+/* table */
+#container-table {
+    width: 100%;
+    display: block;
+    overflow-x: auto;
+}
+
+#data-table {
+    width: 100%;
+    border-spacing: 0 0.5rem;
+}
+
+table thead tr th:first-child,
+table tbody tr td:first-child {
+    border-radius: 0.25rem 0 0 0.25rem;
+}
+
+table thead tr th:last-child,
+table tbody tr td:last-child {
+    border-radius: 0 0.25rem 0.25rem 0;
+}
+
+table thead th {
+    font-weight: normal;
+    font-size: 1rem;
+    text-align: left;
+    color: var(--gray);
+    padding: 0.5rem 2rem;
+}
+
+table tbody tr {
+    opacity: 0.7;
+
+}
+
+table tbody tr:hover {
+    opacity: 1;
+}
+
+table tbody td {
+    background-color: white;
+    padding: 1rem 2rem;
+}
+
+td.trans-description {
+    color: var(--dark-blue)
+}
+
+td.trans-income {
+    color: var(--light-green)
+}
+
+td.trans-expense {
+    color: var(--red)
+}
+
+/* Modal new transaction */
+.modal-overlay {
+    position: fixed;
+    top: 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+
+    background-color: rgba(0, 0, 0, 0.7);
+
+    opacity: 0;
+    visibility: hidden;
+    z-index: 1;
+}
+
+.modal-overlay.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+.modal {
+    padding: 2.4rem;
+    background-color: var(--background);
+    max-width: 500px;
+    width: 90%;
+}
+
+
+/* form */
+
+#form {
+    max-width: 500px;
+}
+
+/* #form h2 {
+    margin-top: 0;
+} */
+
+input {
+    border: none;
+    border-radius: 0.2rem;
+    width: 100%;
+    padding: 0.8rem;
+}
+
+.input-group {
+    margin-top: 0.8rem;
+}
+
+.input-group small {
+    opacity: 0.7;
+}
+
+.input-group.actions {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.input-group.actions .button, .input-group.actions button {
+    width: 48%;
+}
+
+/* footer */
+footer {
+    text-align: center;
+    padding: 4rem 0 2rem;
+    color: var(--gray)
+}
+
+/* Responsive */
+@media (min-width: 800px) {
+    html {
+        font-size: 87.5%;
+    }
+
+    #balance {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 2rem;
+    }
+}
