@@ -151,10 +151,12 @@ header {
 }
 
 /* table */
+
 #container-table {
     width: 100%;
     display: block;
     overflow-x: auto;
+
 }
 
 #data-table {
@@ -274,9 +276,22 @@ input {
 
 /* footer */
 footer {
-    text-align: center;
-    padding: 4rem 0 2rem;
-    color: var(--gray)
+    visibility: hidden;
+    position: fixed;
+    bottom: 2rem;
+    right: 2rem;
+
+    padding: 1rem 2rem;
+    opacity: 0.9;
+    border-radius: 5rem;
+
+    color: white;
+    background-color: var(--dark-blue);
+}
+
+footer a {
+    color: white;
+    text-decoration: underline;
 }
 
 /* Responsive */
@@ -289,5 +304,9 @@ footer {
         display: grid;
         grid-template-columns: repeat(3, 1fr);
         gap: 2rem;
+    }
+
+    footer {
+        visibility: visible;
     }
 }
