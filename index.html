@@ -54,7 +54,7 @@
         <section id="transation">
             <h2 class="sr-only">Transações</h2>
 
-            <a href="#" onclick="openModal()" class="button new">+ Nova Transação</a>
+            <a href="#" onclick="Modal.openModal()" class="button new">+ Nova Transação</a>
             <div id="container-table">
                 <table id="data-table">
                     <thead>
@@ -66,24 +66,6 @@
                         </tr>
                     </thead>
                     <tbody>
-                        <tr>
-                            <td class="trans-description">Luz</td>
-                            <td class="trans-expense">- R$ 500,00</td>
-                            <td>23/01/2023</td>
-                            <td><img src="./assets/minus.svg" alt="Remover transação"></td>
-                        </tr>
-                        <tr>
-                            <td class="trans-description">Luz</td>
-                            <td class="trans-income">R$ 500,00</td>
-                            <td>23/01/2023</td>
-                            <td><img src="./assets/minus.svg" alt="Remover transação"></td>
-                        </tr>
-                        <tr>
-                            <td class="trans-description">Luz</td>
-                            <td class="trans-expense">- R$ 500,00</td>
-                            <td>23/01/2023</td>
-                            <td><img src="./assets/minus.svg" alt="Remover transação"></td>
-                        </tr>
                     </tbody>
                 </table>
             </div>
@@ -91,7 +73,7 @@
         </section>
     </main>
 
-    <div class="modal-overlay active">
+    <div class="modal-overlay">
         <div class="modal">
             <div class="form">
                 <h2>Nova Transação</h2>
@@ -126,7 +108,7 @@
                     </div>
 
                     <div class="input-group actions">
-                        <a href="#" onclick="closeModal()" class="button cancel">Cancelar</a>
+                        <a href="#" onclick="Modal.closeModal()" class="button cancel">Cancelar</a>
                         <button class="button">Salvar</button>
                     </div>
                 </form>
@@ -138,7 +120,7 @@
         <p>dev.finance$</p>
     </footer>
 
-    <script src="main.js"></script>
+    <script src="scripts.js"></script>
 
 </body>
 
