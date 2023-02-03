@@ -190,15 +190,15 @@ table tbody td {
     padding: 1rem 2rem;
 }
 
-td.trans-description {
+td.description {
     color: var(--dark-blue)
 }
 
-td.trans-income {
+td.income {
     color: var(--light-green)
 }
 
-td.trans-expense {
+td.expense {
     color: var(--red)
 }
 
