@@ -29,7 +29,7 @@ const Transaction = {
     },
 
     remove(index) {
-        Transaction.all.splice(index, 1)
+        Transaction.all.splice(index + 1, 1)
 
         App.reload()
     },
